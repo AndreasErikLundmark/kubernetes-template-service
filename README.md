@@ -1,5 +1,8 @@
 # kubernetes-template-service
 
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white)
+![Minikube](https://img.shields.io/badge/Minikube-0096FF?style=flat&logo=minikube&logoColor=white)
+
 Simple Spring Boot message-app that serves a message on GET URL+`/api/message`. 
 
 #Follow the Minikube installation guide:
