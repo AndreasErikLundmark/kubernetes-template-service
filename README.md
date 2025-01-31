@@ -42,7 +42,7 @@ kubectl get services
 ```bash
 minikube service message-api
 ```
-Should show somthing like this: 
+Should show something like this: 
 ```bash
 |-----------|-------------|-------------|---------------------------|
 | NAMESPACE |    NAME     | TARGET PORT |            URL            |
