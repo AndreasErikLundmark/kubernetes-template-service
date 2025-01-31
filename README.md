@@ -10,11 +10,11 @@ Simple Spring message app that serves a message on URL `/api/message`.
 ```bash
 minikube start 
 ```
-###Build
+#Build
 ```bash
 docker build -t your-dockerhub-username/kubernetes-setup:latest . 
 ```
-###Push to docker hub ( log in )
+#Push to docker hub ( log in )
 ```bash
 docker push your-dockerhub-username/kubernetes-setup:latest                        
 ```
@@ -22,20 +22,20 @@ docker push your-dockerhub-username/kubernetes-setup:latest
           image: dockerhub-username/kubernetes-setup
           imagePullPolicy: Always
 
-###Run
+#Run
 ```bash
 kubectl apply -f deployment.yaml
 ```
-### See service.yaml under /infrastructure
+#See service.yaml under /infrastructure
 ```bash
 kubectl apply -f service.yaml
 ```
-###Check status
+#Check status
 ```bash
 kubectl get services
 ```
 
-###Run
+#Run
 ```bash
 minikube service message-api
 ```
