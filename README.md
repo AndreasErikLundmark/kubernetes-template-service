@@ -47,12 +47,12 @@ Should show somthing like this:
 | default   | message-api |        8080 | http://111.111.11.1:30000 |
 |-----------|-------------|-------------|---------------------------|
 ```
-###Forward port example
+#Forward port example
 ```bash
 kubectl port-forward service/message-api 8080:8080
 ```
 
-###install K9 
+#install K9 
 ```bash
 kubectl config use-context minikube
 #Run
