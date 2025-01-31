@@ -1,11 +1,15 @@
 # kubernetes-template-service
 
-Simple Spring message app that serves a message on URL/api/message
+Simple Spring message app that serves a message on URL `/api/message`.
 
-Setup Minikube
-https://minikube.sigs.k8s.io/docs/start/?arch=%2Fmacos%2Farm64%2Fstable%2Fhomebrew
+## Setup Minikube
 
-#After installing 
+Follow the Minikube installation guide:
+[Minikube installation guide](https://minikube.sigs.k8s.io/docs/start/?arch=%2Fmacos%2Farm64%2Fstable%2Fhomebrew)
+
+### After installing Minikube
+Run the following command to start Minikube:
+```bash
 minikube start
 
 #Build
