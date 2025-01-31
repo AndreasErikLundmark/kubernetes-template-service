@@ -2,7 +2,8 @@
 
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white)
 
-Simple Spring Boot message-app that serves a message on GET URL+`/api/message`. 
+Setting up a local Kubernetes cluster using Minikube along with a 
+Simple Spring Boot message-app that serves a message on GET URL+`/api/message` for demo
 
 #Follow the Minikube installation guide:
 [Minikube installation guide](https://minikube.sigs.k8s.io/docs/start/?arch=%2Fmacos%2Farm64%2Fstable%2Fhomebrew)
