@@ -26,7 +26,7 @@ docker push your-dockerhub-username/kubernetes-setup:latest
 ```bash
 kubectl apply -f deployment.yaml
 ```
-#See service.yaml under /infrastructure
+### See service.yaml under /infrastructure
 ```bash
 kubectl apply -f service.yaml
 ```
