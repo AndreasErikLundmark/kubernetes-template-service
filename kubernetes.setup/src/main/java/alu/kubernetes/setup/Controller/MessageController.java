@@ -24,4 +24,11 @@ public class MessageController {
         String message = messageService.getFreshMessage();
         return ResponseEntity.status(HttpStatus.OK).body(message);
     }
+
+    @PostMapping("/message/new")
+    public ResponseEntity<String> addMessage(@RequestBody Message message) {
+        messageService.createMessage(message);
+        return ResponseEntity.status(HttpStatus.CREATED).body("Message added");
+    }
+
 }

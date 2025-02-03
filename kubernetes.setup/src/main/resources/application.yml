@@ -3,6 +3,9 @@ debug: true
 server:
   port: ${PORT:8080}
 spring:
+  config:
+    import: classpath:secret.yml
+
   sql:
     init:
       platform: postgresql
@@ -13,9 +16,10 @@ spring:
       enabled: always
 
   datasource:
-    url: ${DB_URL:jdbc:postgresql://localhost:5432/messageDb}
-    username: ${DB_SALT:Andreas}
-    password: ${DB_PASSWORD:12345}
+    url: ${database.url}
+    username: ${database.username:Andreas}
+    password: ${database.password:12345}
+    driver-class-name: org.postgresql.Driver
 
   jpa:
     hibernate:
