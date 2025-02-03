@@ -1,4 +1,4 @@
-.secret.yml
+secret.yml
 
 # Ignore .DS_Store (macOS specific)
 .DS_Store
