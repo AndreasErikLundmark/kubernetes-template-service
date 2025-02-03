@@ -17,7 +17,6 @@ spring:
     username: ${DB_SALT:Andreas}
     password: ${DB_PASSWORD:12345}
 
-
   jpa:
     hibernate:
       ddl-auto: update
