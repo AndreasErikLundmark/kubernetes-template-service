@@ -1,9 +1,25 @@
-FROM maven:3.8.7-openjdk-18-slim
+FROM maven:3.8.7-openjdk-18-slim AS build
 
-
+# Set the working directory
 WORKDIR /app
+
+# Copy the pom.xml and download dependencies to leverage Docker cache
+COPY pom.xml .
+RUN mvn dependency:go-offline
+
+# Copy the whole project
 COPY . .
+
 RUN mvn clean package -DskipTests
+
+# Start a new stage to reduce the final image size
+FROM openjdk:18-slim
+
+# Set the working directory for the final image
+WORKDIR /app
+
+COPY --from=build /app/target/kubernetes.setup-0.0.1-SNAPSHOT.jar /app/kubernetes.setup.jar
+
 EXPOSE 8080
 
-ENTRYPOINT ["java","-jar","/app/target/kubernetes.setup-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "/app/kubernetes.setup.jar"]
