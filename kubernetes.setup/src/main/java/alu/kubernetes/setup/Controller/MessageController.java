@@ -29,7 +29,7 @@ public class MessageController {
     @GetMapping("/message")
     public ResponseEntity<String> getMessage() {
         String message = messageService.getFreshMessage();
-        return ResponseEntity.status(HttpStatus.OK).body("hello");
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("hello");
     }
 
     @PostMapping("/message/new")
