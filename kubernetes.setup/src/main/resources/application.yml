@@ -16,9 +16,9 @@ spring:
 
   datasource:
     url: ${database.url}
-    username: ${database.username:Andreas}
-    password: ${database.password:12345}
-    driver-class-name: org.postgresql.Driver
+    username: ${database.username}
+    password: ${database.password}
+#    driver-class-name: org.postgresql.Driver
 
   jpa:
     hibernate:

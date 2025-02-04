@@ -14,11 +14,16 @@ import java.util.List;
 @CrossOrigin(origins = "*")
 public class MessageController {
 
+
     private MessageService messageService;
 
     @Autowired
     public MessageController(MessageService messageService) {
-        this.messageService = messageService;
+        try {
+            this.messageService = messageService;
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @GetMapping("/message")
