@@ -2,6 +2,7 @@ package alu.kubernetes.setup.Service;
 
 import alu.kubernetes.setup.Model.Message;
 import alu.kubernetes.setup.repository.MessageRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Random;
@@ -12,6 +13,7 @@ public class MessageService {
     private MessageRepository messageRepository;
     private List<String> cachedMessages;
 
+    @Autowired
     public MessageService(MessageRepository messageRepository) {
         this.messageRepository = messageRepository;
         this.cachedMessages = getMessagesAsStringList();
