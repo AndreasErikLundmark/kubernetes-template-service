@@ -1,7 +1,6 @@
 debug: true
-
 server:
-  port: ${PORT:8080}
+  port: 8080
 spring:
   config:
     import: classpath:secret.yml
