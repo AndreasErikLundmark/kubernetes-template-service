@@ -1,3 +1,4 @@
+# First stage: Build the app using Maven
 FROM maven:3.8.7-openjdk-18-slim AS build
 
 # Set the working directory inside the container
@@ -6,8 +7,8 @@ WORKDIR /app
 # Copy pom.xml from the root into /app
 COPY pom.xml /app/
 
-# Copy the entire kubernetes.setup folder to /app/kubernetes.setup
-COPY kubernetes.setup/ /app/kubernetes.setup/
+# Copy the source code into /app/src
+COPY src/ /app/src/
 
 # Run Maven clean package (skip tests)
 RUN mvn clean package -DskipTests
