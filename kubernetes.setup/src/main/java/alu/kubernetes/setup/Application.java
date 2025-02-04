@@ -10,7 +10,7 @@ public class Application {
 
 		SpringApplication.run(Application.class, args);
 //		System.out.println("Message app is running!");
-
+// adding comment
 	}
 
 }
